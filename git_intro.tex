@@ -1,0 +1,53 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage[many]{tcolorbox}
+\usetheme{metropolis}
+
+\newcommand{\floatbox}[2]{
+    \begin{tcolorbox}[beamer,
+                  width=#1\textheight,
+                  arc=0pt,
+                  boxsep=0pt,
+                  left=0pt,right=0pt,top=0pt,bottom=0pt,
+                  ]
+    \includegraphics[width=\linewidth]{#2}
+    \end{tcolorbox}
+}
+
+
+\title{Introduction to \texttt{git}}
+\author{Jessica Rehak}
+\date{\today}
+\titlegraphic{
+    \includegraphics[scale=0.15]{git_logo}
+}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{What is \texttt{git}?}
+    \begin{itemize}
+        \item A \textbf{distributed version control system} (DVCS) developed by Linus Torvald (of Linux fame)
+        \begin{itemize}
+            \item \textbf{Version control}: organizing and tracking different versions of code.
+            \item \textbf{Distributed}: not centralized; all users have access to the whole \textit{history} of the code.
+        \end{itemize}
+        \item \texttt{git} was created in 2005
+    \end{itemize}
+    \centering
+    \floatbox{0.8}{images/first_commit.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Some terms}
+\begin{itemize}
+    \item \textbf{Repository}: a folder under version control with a project's files and history
+    \item \textbf{Remote repository}: a repository on someone else's computer (github, gitlab, etc)
+\end{itemize}
+\end{frame}
+
+\end{document}
